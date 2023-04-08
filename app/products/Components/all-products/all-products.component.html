@@ -1,0 +1,231 @@
+
+<p>+++++++++++++++++++++++++++++++++++++++++++</p>
+<div class="row">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/category/cache/96x96/l/a/lapt_pcs.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="col-lg-4">
+            <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/category/cache/96x96/l/a/lapt_pcs.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="col-lg-4">
+            <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/category/cache/96x96/l/a/lapt_pcs.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+      <div class="carousel-item">
+        <!-- <img src="..." class="d-block w-100" alt="..."> -->
+      </div>
+      <div class="carousel-item">
+        <!-- <img src="..." class="d-block w-100" alt="..."> -->
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
+<!-- <div class="row"*ngFor="let item of categories">
+  <div class="col-md-2 col-sm-3" >
+
+<img src="{{item.img}}">
+
+</div>
+</div> -->
+<p>+++++++++++++++++++++++++++++++++++++++++++</p>
+<!-- قسم العروض -->
+<div id="carouselExampleSlidesOnly" class="carousel slide"
+data-bs-ride="carousel" style="padding: 50px;cursor: pointer; ">
+    <div class="carousel-inner" >
+      <div class="carousel-item active">
+        <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/banner/r/a/ramadan_cat_60_mp-deal__web-banner__2368x800_ar_1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/banner/c/o/cookers_web-banner__2368x800_ar.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/banner/r/e/refrigerators_freezersweb-banner__2368x800_ar.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/banner/r/a/ramadan_cat_mp-deal__web-banner__2368x800_ar.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/banner/r/a/ramadan_mc_online_10__generic__web-banner__2368x800_ar_1_.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://btech.com/cdn-cgi/image/quality=50,format=auto/media/homecontent/banner/w/e/web_arrr_mobiles.png" class="d-block w-100" alt="...">
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+<!------------------------------------------ section 2 image categories ----------------------------------->
+
+
+
+<div class="card-group row row-cols-4 row-cols-md-6 row-cols-lg-9" style="padding-left: 50px;padding-right: 50px;"*ngFor="let item of categories">
+  <div class="card col " style="padding: 10px;border: none;">
+      <img src={{item.Images}} class="card-img-top img-fluid" alt="...">
+        <p *ngIf="currentCulture=='ar'" class="card-title text-center" style="font-size:smaller;">{{item.Name}}</p>
+        <p *ngIf="currentCulture=='en'" class="card-title text-center" style="font-size:smaller;">{{item.NameArabic}}</p>
+    </div>
+
+
+    </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="padding: 50px;cursor: pointer; ">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets\ImgAdsBody 1.PNG" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------------------------section3 card body--------------------------- -->
+ <!-- <div >
+      <h4 class="text-end p-5">{{"New arrivals"|translate}}</h4>
+
+      <div class="row row-cols-1 row-cols-md-4 g-4" >
+
+        <div class="col" *ngFor="let prd of prdOfferlist , let i = index">
+          <div class="card p-0">
+            <div class="d-flex justify-content-center">
+              <img  src={{prd.productImageList[0].path}}  style="width: auto; height: 150px;" alt="...">
+            </div>
+            <div class="card-body">
+              <div *ngIf="currentCulture == 'ar'">
+                <div class="fs-5 fw-bold" >{{ prd.nameAR }}</div>
+              </div>
+              <div *ngIf="currentCulture == 'en'">
+                <div class="fs-5 fw-bold"  >{{ prd.nameEN }}</div>
+              </div>
+              <div >
+                <div class="price d-flex flex-row align-items-center">
+                    <div class="text-danger ml-2"> <small class="dis-price">{{prd.unitPrice}} {{" EGP "|translate}}</small> <br> <span>{{"OFF"|translate}}%{{prd.discount}} </span> </div>
+                    <br>
+
+                </div>
+                <span class="act-price">{{prd.totalPrice}} {{" EGP "|translate}}</span>
+              </div>
+             <div *ngIf="prd.discount==0">
+                    <div class="price d-flex flex-row align-items-center"> <span class="act-price">{{prd.totalPrice}} {{" EGP "|translate}}</span>
+                    <div class="ml-2">  </div>
+                </div>
+              </div>
+              <br>
+
+            </div>
+            <a class="btn btn-primary my-1  w-75 mx-auto fw-bold"  (click)="AddToCart(prd)">{{"AddToCard"|translate}}</a>
+            <a class="btn btn-primary my-1  w-75 mx-auto fw-bold mb-3"  (click)="OpenPrdDetails(prd.id)">{{"More Details"|translate}}</a>
+
+        </div>
+        </div>
+      </div> -->
+
+
+
+
+      <!-- ---------------------------------------section3 card body--------------------------- -->
+<!-- قسم مزايا بى تك -->
+
+<div id="carouselExampleControls"  class="carousel slide"  style="cursor:pointer;">
+  <h4 class="text-end p-5">{{"Why B.TECH"}}</h4>
+    <div class="carousel-inner" id="imgBG">
+      <div class="carousel-item active">
+        <div class="card">
+            <img src="assets\postive1.PNG"  style="height: 200px;"  class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <img src="assets\postive2.PNG"  style="height: 200px;"  class="d-block w-100" alt="...">
+        </div>
+     </div>
+     <div class="carousel-item">
+      <div class="card">
+          <img src="assets\postive3.PNG"  style="height: 200px;"  class="d-block w-100" alt="...">
+      </div>
+   </div>
+      <div class="carousel-item">
+         <div class="card">
+            <img src="assets\postive4.PNG"  style="height: 200px;"  class="d-block w-100" alt="...">
+         </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+    <!-- ---------------------------------------section4 card body--------------------------- -->
+<!-- افضل العروض -->
+
+<div>
+
+
+<div >
+
+  <h4 class="text-end p-5">{{"Top offers"|translate}}</h4>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+
+    <div class="col" *ngFor="let prd of products ">
+      <div *ngIf="prd.discount">
+        <div class="card">
+          <div class="d-flex justify-content-center">
+            <img src={{url+prd.imagePath}} style="width: auto; height: 150px;" alt="...">
+          </div>
+          <div class="card-body">
+            <div *ngIf="currentCulture != 'en'">
+              <div class="fs-5 fw-bold">{{ prd.nameArabic }}</div>
+            </div>
+            <div *ngIf="currentCulture == 'en'">
+              <div class="fs-5 fw-bold">{{ prd.name }}</div>
+            </div>
+            <div>
+              <div class="price d-flex flex-row align-items-center">
+                <div class="text-danger ml-2"> <small class="dis-price">{{prd.price}} {{" EGP "|translate}}</small>
+                  <br> <span>{{"OFF"|translate}}%{{prd.discount}} </span> </div>
+                <br>
+
+              </div>
+              <span class="act-price">{{prd.price}} {{" EGP "|translate}}</span>
+            </div>
+
+            <br>
+
+          </div>
+
+          <!-- <a class="btn btn-primary my-1 w-75 mx-auto fw-bold"  (click)="AddToCart(prd)">{{"AddToCard"|translate}}</a> -->
+          <a class="btn btn-primary my-1 mb-3 w-75 mx-auto fw-bold" (click)="OpenPrdDetails(prd.id)">{{"More Details"|translate}}</a>
+
+        </div>
+        </div>
+
+    </div>
+  </div>
+  </div>
+
+
+  </div>
+<br><br>
+<!-- ---------------------------------------section5 card body--------------------------- -->
